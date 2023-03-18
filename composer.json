@@ -1,19 +1,19 @@
 {
-    "name": "geekseller/ebay-sdk-php",
+    "name": "tsarouxas/ebay-sdk-php",
     "description": "An eBay SDK for PHP. Use the eBay API in your PHP projects.",
     "keywords": ["ebay", "api", "sdk"],
-    "homepage": "https://www.geekseller.com/",
+    "homepage": "https://www.hellenictechnologies.com/",
     "type": "library",
     "license": "(Apache-2.0 and MIT)",
     "authors": [
         {
-            "name": "GeekSeller",
-            "email": "support@geekseller.com",
-            "homepage": "https://www.geekseller.com"
+            "name": "George Tsarouxas",
+            "email": "tsarouxas@hellenictechnologies.com",
+            "homepage": "https://www.hellenictechnologies.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/geekseller/ebay-sdk-php/issues"
+        "issues": "https://github.com/tsarouxas/ebay-sdk-php/issues"
     },
     "require": {
         "php": ">=5.5",
