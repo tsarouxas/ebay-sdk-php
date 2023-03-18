@@ -4,9 +4,8 @@ This repository is not a hobby or a side-project, but a code maintained by a for
 
 # About this repository
 
-This repository is maintained by the company [GeekSeller.com](https://www.geekseller.com/), and it is a fork of another [eBay SDK repository](https://github.com/davidtsadler/ebay-sdk-php/). The original code has been developed by [David T. Sadler](https://github.com/davidtsadler), however, in February 2020, David archived the project and decided not to continue maintaining it. GeekSeller uses David’s SDK in the production, so we decided to create a fork of this SDK, maintain it as a separate project and offer it to the community.
-
-Please note that GeekSeller is part of the eBay Developer Program and we have our eBay application listed in the [eBay Solution Directory](https://cgi6.ebay.com/ws/eBayISAPI.dll?SolutionsDirectory&page=details&solutionId=705084376), however, this SDK is not endorsed, sponsored or maintained by eBay.
+This repository is a fork of another 2 repositories [GeekSeller.com](https://github.com/geekseller/ebay-sdk-php/) [eBay SDK repository](https://github.com/davidtsadler/ebay-sdk-php/). The original code has been developed by [David T. Sadler](https://github.com/davidtsadler), however, in February 2020, David archived the project and decided not to continue maintaining it. GeekSeller uses David’s SDK in the production, so we decided to create a fork of this SDK, maintain it as a separate project and offer it to the community. Please note that GeekSeller is part of the eBay Developer Program and we have our eBay application listed in the [eBay Solution Directory](https://cgi6.ebay.com/ws/eBayISAPI.dll?SolutionsDirectory&page=details&solutionId=705084376), however, this SDK is not endorsed, sponsored or maintained by eBay.
+Continuing with a fork from virgileb's repo and maintaining it on our end.
 
 ## Support
 
@@ -16,7 +15,7 @@ This repository is updated on a regular basis. It may take time to have reported
 
 The documentation for the eBay API can be found [here](https://developer.ebay.com/docs).
 
-Some [examples](https://github.com/geekseller/ebay-sdk-examples) of using this SDK.
+Some [examples](https://github.com/tsarouxas/ebay-sdk-examples) of using this SDK.
 
 ## Requirements
 
@@ -28,25 +27,17 @@ Some [examples](https://github.com/geekseller/ebay-sdk-examples) of using this S
 
 ## Installation
 
-The SDK can be installed with [Composer](http://getcomposer.org/). Please see the [Installation section of the User Guide](http://devbay.net/sdk/guides/getting-started/installation.html) to learn about installing through other means.
+Add repositories in composer.json
 
-  1. Install Composer.
+"repositories": [
+    {
+        "url": "https://github.com/tsarouxas/ebay-sdk-php",
+        "type": "git"
+    }
+],
+Add the package name in require with the branch name after the dev:
 
-     ```
-     curl -sS https://getcomposer.org/installer | php
-     ```
-
-  1. Install the SDK.
-
-     ```
-     php composer.phar require geekseller/ebay-sdk-php
-     ```
-
-  1. Require Composer's autoloader by adding the following line to your code.
-
-     ```php
-     require 'vendor/autoload.php';
-     ```
+"tsarouxas/ebay-sdk-php": "master"
 
 ## Example
 
