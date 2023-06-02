@@ -260,6 +260,7 @@ class OAuthService
      */
     public function getAppTokenAsync(\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request = null)
     {
+       
         if (!$request) {
             $request = new \DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest();
         }
@@ -272,7 +273,6 @@ class OAuthService
         if (!isset($request->scope)) {
             $request->scope = 'https://api.ebay.com/oauth/api_scope';
         }
-
         return $this->callOperationAsync('getAppToken', $request);
     }
 
@@ -311,13 +311,13 @@ class OAuthService
         $debug = $this->getConfig('debug');
         $httpHandler = $this->getConfig('httpHandler');
         $httpOptions = $this->getConfig('httpOptions');
-
+       
         if ($debug !== false) {
             $this->debugRequest($url, $headers, $body);
         }
 
         $request = new Request($method, $url, $headers, $body);
-
+        
         return $httpHandler($request, $httpOptions)->then(
             function (ResponseInterface $res) use ($debug, $responseClass) {
                 $json = $res->getBody()->getContents();

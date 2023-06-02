@@ -23,7 +23,7 @@ class Availability extends \DTS\eBaySDK\Types\BaseType
     private static $propertyTypes = [
         'pickupAtLocationAvailability' => [
             'type' => 'DTS\eBaySDK\Inventory\Types\PickupAtLocationAvailability',
-            'repeatable' => true,
+            'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pickupAtLocationAvailability'
         ],
