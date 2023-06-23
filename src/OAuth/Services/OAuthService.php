@@ -185,8 +185,7 @@ class OAuthService
             'redirect_uri'  => $this->getConfig('ruName'),
             'response_type' => 'code',
             'state'         => $params['state'],
-            'scope'         => implode($params['scope'], ' ')
-
+            'scope'         => implode(' ', $params['scope']),
         ];
 
         return $url.http_build_query($urlParams, null, '&', PHP_QUERY_RFC3986);
