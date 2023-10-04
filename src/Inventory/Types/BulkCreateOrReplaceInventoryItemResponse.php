@@ -10,12 +10,21 @@
 
 namespace DTS\eBaySDK\Inventory\Types;
 
-class BulkCreateOrReplaceInventoryItemRestRequest extends \DTS\eBaySDK\Inventory\Types\BulkCreateOrReplaceInventoryItem
+/**
+ * @property \DTS\eBaySDK\Inventory\Types\BulkInventoryItemResponse[] $responses
+ */
+class BulkCreateOrReplaceInventoryItemResponse extends \DTS\eBaySDK\Types\BaseType
 {
     /**
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
+        'responses' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\BulkInventoryItemResponse',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'responses',
+        ],
     ];
 
     /**

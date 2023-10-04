@@ -17,7 +17,7 @@ use DTS\eBaySDK\StatusCodeTrait;
  * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $errors
  * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $warnings
  */
-class BulkCreateOrReplaceInventoryItemRestResponse extends \DTS\eBaySDK\Inventory\Types\BulkInventoryItemResponse
+class BulkCreateOrReplaceInventoryItemRestResponse extends \DTS\eBaySDK\Inventory\Types\BulkCreateOrReplaceInventoryItemResponse
 {
     use HttpHeadersTrait;
     use StatusCodeTrait;

@@ -11,7 +11,11 @@
 namespace DTS\eBaySDK\Inventory\Types;
 
 /**
- * @property \DTS\eBaySDK\Inventory\Types\MigrateListingResponse[] $responses
+ * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $errors
+ * @property string $locale
+ * @property string $sku
+ * @property int $statusCode
+ * @property \DTS\eBaySDK\Inventory\Types\ErrorDetailV3[] $warnings
  */
 class BulkInventoryItemResponse extends \DTS\eBaySDK\Types\BaseType
 {
@@ -19,11 +23,35 @@ class BulkInventoryItemResponse extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'responses' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\MigrateListingResponse',
+        'errors' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\ErrorDetailV3',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'responses',
+            'elementName' => 'errors',
+        ],
+        'locale' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'locale',
+        ],
+        'sku' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'sku',
+        ],
+        'statusCode' => [
+            'type' => 'integer',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'statusCode',
+        ],
+        'warnings' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\ErrorDetailV3',
+            'repeatable' => true,
+            'attribute' => false,
+            'elementName' => 'warnings',
         ],
     ];
 

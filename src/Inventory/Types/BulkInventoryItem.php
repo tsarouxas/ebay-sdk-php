@@ -11,7 +11,14 @@
 namespace DTS\eBaySDK\Inventory\Types;
 
 /**
- * @property \DTS\eBaySDK\Inventory\Types\InventoryItem[] $requests
+ * @property \DTS\eBaySDK\Inventory\Types\Availability $availability
+ * @property \DTS\eBaySDK\Inventory\Enums\ConditionEnum $condition
+ * @property string $conditionDescription
+ * @property string $locale
+ * @property \DTS\eBaySDK\Inventory\Types\PackageWeightAndSize $packageWeightAndSize
+ * @property \DTS\eBaySDK\Inventory\Types\Product $product
+ * @property string $sku
+ * @property string[] $groupIds
  */
 class BulkInventoryItem extends \DTS\eBaySDK\Types\BaseType
 {
@@ -19,11 +26,53 @@ class BulkInventoryItem extends \DTS\eBaySDK\Types\BaseType
      * @var array Properties belonging to objects of this class.
      */
     private static $propertyTypes = [
-        'requests' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\InventoryItem',
+        'availability' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\Availability',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'availability',
+        ],
+        'condition' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'condition',
+        ],
+        'conditionDescription' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'conditionDescription',
+        ],
+        'locale' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'locale',
+        ],
+        'packageWeightAndSize' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\PackageWeightAndSize',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'packageWeightAndSize',
+        ],
+        'product' => [
+            'type' => 'DTS\eBaySDK\Inventory\Types\Product',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'product',
+        ],
+        'sku' => [
+            'type' => 'string',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'sku',
+        ],
+        'groupIds' => [
+            'type' => 'string',
             'repeatable' => true,
             'attribute' => false,
-            'elementName' => 'requests',
+            'elementName' => 'groupIds',
         ],
     ];
 
