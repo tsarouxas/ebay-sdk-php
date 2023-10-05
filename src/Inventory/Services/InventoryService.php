@@ -204,6 +204,13 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
             'params' => [
             ],
         ],
+        'BulkCreateOffer' => [
+            'method' => 'POST',
+            'resource' => 'bulk_create_offer',
+            'responseClass' => '\DTS\eBaySDK\Inventory\Types\BulkCreateOfferRestResponse',
+            'params' => [
+            ],
+        ],
         'DeleteOffer' => [
             'method' => 'DELETE',
             'resource' => 'offer/{offerId}',
@@ -625,6 +632,22 @@ class InventoryService extends \DTS\eBaySDK\Inventory\Services\InventoryBaseServ
     public function createOfferAsync(\DTS\eBaySDK\Inventory\Types\CreateOfferRestRequest $request)
     {
         return $this->callOperationAsync('CreateOffer', $request);
+    }
+
+    /**
+     * @return \DTS\eBaySDK\Inventory\Types\BulkCreateOfferRestResponse
+     */
+    public function bulkCreateOffer(\DTS\eBaySDK\Inventory\Types\BulkCreateOfferRestRequest $request)
+    {
+        return $this->bulkCreateOfferAsync($request)->wait();
+    }
+
+    /**
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkCreateOfferAsync(\DTS\eBaySDK\Inventory\Types\BulkCreateOfferRestRequest $request)
+    {
+        return $this->callOperationAsync('BulkCreateOffer', $request);
     }
 
     /**
